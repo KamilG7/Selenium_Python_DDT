@@ -1,10 +1,8 @@
 from selenium.webdriver.common.by import By
 
 
-class CommonLocators:
-    home_url = "http://seleniumdemo.com/"
-
 class MyAccountLocators:
+    my_account_tab = (By.XPATH, "//li[@id='menu-item-22']/a[@class='nav__link']")
     login_error_list = (By.XPATH, "//ul[@class='woocommerce-error']/li")
     login_email = (By.XPATH, "//input[@name='username']")
     login_password = (By.XPATH, "//input[@name='password']")
@@ -14,6 +12,7 @@ class MyAccountLocators:
     registration_password = (By.XPATH, "//input[@autocomplete='new-password']")
     registration_button = (By.NAME, "register")
     registration_error_list = (By.XPATH, "//ul[@role='alert']/li")
+    registration_data_link = "C:\\Users\\kamil\\PycharmProjects\\Selenium_Python_DDT\\Data\\registration.csv"
 
 class AddressLocators:
     address_tab = (By.XPATH, "//a[contains(text(), 'Addresses')]")
