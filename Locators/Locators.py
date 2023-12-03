@@ -6,7 +6,7 @@ class MyAccountLocators:
     login_error_list = (By.XPATH, "//ul[@class='woocommerce-error']/li")
     login_email = (By.XPATH, "//input[@name='username']")
     login_password = (By.XPATH, "//input[@name='password']")
-    sign_in_button = (By.NAME, "Login")
+    sign_in_button = (By.NAME, "login")
     log_out_button = (By.XPATH, "//a[contains(text(), 'Logout')]")
     registration_email = (By.XPATH, "//input[@type='email']")
     registration_password = (By.XPATH, "//input[@autocomplete='new-password']")

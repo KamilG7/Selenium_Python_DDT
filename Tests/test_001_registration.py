@@ -4,8 +4,6 @@ import OwnLibs.CSVReader
 from Pages.my_account_po import MyAccountPO
 from Data.Variables import AllVars
 
-
-
 @pytest.mark.usefixtures("setup")
 class TestRegistration:
 
@@ -23,7 +21,7 @@ class TestRegistration:
 
     @allure.title("S_1002, TC_1002, TC_1003, TC_1004, TC_1005, TC_1006")
     @allure.description("Registration with invalid data should display correct error messages")
-    def test_correct_registration(self, setup):
+    def test_incorrect_registration(self, setup):
         for registration_data in OwnLibs.CSVReader.read_csv(AllVars.registration_data_link):
             self.driver.get(AllVars.home_url)
             my_account = MyAccountPO(self.driver)

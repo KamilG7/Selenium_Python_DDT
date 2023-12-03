@@ -21,23 +21,23 @@ class MyAccountPO:
 
     @allure.step("Input email to registration form")
     def registration_email_input(self, email):
-        self.logger.info("Input email to registration form")
+        self.logger.info("Input user email to registration form")
         if email == "#BLANK":
             pass
         else:
             lib_input_text(self.driver, MyAccountLocators.registration_email, email)
-            allure.attach(self.driver.get_screenshot_as_png(), name="Input email to registration form",
-                      attachment_type=AttachmentType.PNG)
+            allure.attach(self.driver.get_screenshot_as_png(),
+                          name="Input email to registration form", attachment_type=AttachmentType.PNG)
 
-    @allure.step("Input correct password to registration form")
+    @allure.step("Input password to registration form")
     def registration_password_input(self, password):
-        self.logger.info("Input correct password to registration form")
+        self.logger.info("Input password to registration form")
         if password == "#BLANK":
             pass
         else:
             lib_input_text(self.driver, MyAccountLocators.registration_password, password)
-            allure.attach(self.driver.get_screenshot_as_png(), name="Input password to registration form",
-                      attachment_type=AttachmentType.PNG)
+            allure.attach(self.driver.get_screenshot_as_png(),
+                          name="Input password to registration form", attachment_type=AttachmentType.PNG)
 
     @allure.step("Submit Registration Form")
     def submit_registration_form(self):

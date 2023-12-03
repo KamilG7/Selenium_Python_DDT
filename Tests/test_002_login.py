@@ -23,7 +23,7 @@ class TestLogin:
 
     @allure.title("S_1004, TC_1007, TC_1008, TC_1009, TC_1010, TC_1011, TC_1012")
     @allure.description("Login with invalid data should display correct error messages")
-    def test_correct_login(self, setup):
+    def test_incorrect_login(self, setup):
         for login_credentials in OwnLibs.CSVReader.read_csv(AllVars.login_data_link):
             self.driver.get(AllVars.home_url)
             my_account = MyAccountPO(self.driver)
