@@ -5,3 +5,4 @@ class AllVars:
     correct_email = EmailRandomizer.email_randomizer()
     home_url = "http://seleniumdemo.com/"
     registration_data_link = "C:\\Users\\kamil\\PycharmProjects\\Selenium_Python_DDT\\Data\\registration.csv"
+    login_data_link = "C:\\Users\\kamil\\PycharmProjects\\Selenium_Python_DDT\\Data\\login.csv"

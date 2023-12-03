@@ -26,7 +26,7 @@ class MyAccountPO:
             pass
         else:
             lib_input_text(self.driver, MyAccountLocators.registration_email, email)
-            allure.attach(self.driver.get_screenshot_as_png(), name="Input correct email to registration form",
+            allure.attach(self.driver.get_screenshot_as_png(), name="Input email to registration form",
                       attachment_type=AttachmentType.PNG)
 
     @allure.step("Input correct password to registration form")
@@ -36,7 +36,7 @@ class MyAccountPO:
             pass
         else:
             lib_input_text(self.driver, MyAccountLocators.registration_password, password)
-            allure.attach(self.driver.get_screenshot_as_png(), name="Input correct password to registration form",
+            allure.attach(self.driver.get_screenshot_as_png(), name="Input password to registration form",
                       attachment_type=AttachmentType.PNG)
 
     @allure.step("Submit Registration Form")
@@ -65,5 +65,35 @@ class MyAccountPO:
         assert error in lib_get_text(self.driver, MyAccountLocators.registration_error_list)
         allure.attach(self.driver.get_screenshot_as_png(), name="Verify error", attachment_type=AttachmentType.PNG)
 
+    @allure.step("Input email to login form")
+    def login_email_input(self, email):
+        self.logger.info("Input email to login form")
+        if email == "#BLANK":
+            pass
+        else:
+            lib_input_text(self.driver, MyAccountLocators.login_email, email)
+            allure.attach(self.driver.get_screenshot_as_png(), name="Input email to login form",
+                          attachment_type=AttachmentType.PNG)
 
+    @allure.step("Input password to registration form")
+    def login_password_input(self, password):
+        self.logger.info("Input password to login form")
+        if password == "#BLANK":
+            pass
+        else:
+            lib_input_text(self.driver, MyAccountLocators.login_password, password)
+            allure.attach(self.driver.get_screenshot_as_png(), name="Input password to login form",
+                          attachment_type=AttachmentType.PNG)
 
+    @allure.step("Submit Login Form")
+    def submit_login_form(self):
+        self.logger.info("Submit Login Form")
+        lib_click(self.driver, MyAccountLocators.sign_in_button)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Submit Login Form",
+                      attachment_type=AttachmentType.PNG)
+
+    @allure.step("Verify if error associated with data is correct")
+    def verify_login_error(self, error):
+        self.logger.info("Verify if error associated with data is correct")
+        assert error in lib_get_text(self.driver, MyAccountLocators.login_error_list)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Verify error", attachment_type=AttachmentType.PNG)

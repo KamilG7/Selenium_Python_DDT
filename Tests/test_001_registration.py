@@ -1,6 +1,5 @@
 import pytest
 import allure
-
 import OwnLibs.CSVReader
 from Pages.my_account_po import MyAccountPO
 from Data.Variables import AllVars
