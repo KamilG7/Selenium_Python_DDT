@@ -6,3 +6,4 @@ class AllVars:
     home_url = "http://seleniumdemo.com/"
     registration_data_link = "C:\\Users\\kamil\\PycharmProjects\\Selenium_Python_DDT\\Data\\registration.csv"
     login_data_link = "C:\\Users\\kamil\\PycharmProjects\\Selenium_Python_DDT\\Data\\login.csv"
+    address_data_link = "C:\\Users\\kamil\\PycharmProjects\\Selenium_Python_DDT\\Data\\address.csv"

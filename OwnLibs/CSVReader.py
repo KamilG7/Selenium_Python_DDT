@@ -11,4 +11,3 @@ def read_csv(csv_file):
     else:
         return data
 
-#print(read_csv("../Data/login.csv"))

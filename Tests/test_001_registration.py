@@ -8,7 +8,7 @@ from Data.Variables import AllVars
 class TestRegistration:
 
     @allure.title("S_1001, TC_1001")
-    @allure.description("Test registration with valid credentials")
+    @allure.description("Test registration with valid credentials should succeed")
     def test_correct_registration(self, setup):
         self.driver.get(AllVars.home_url)
         my_account = MyAccountPO(self.driver)
