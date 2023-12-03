@@ -8,11 +8,11 @@ from Data.Variables import AllVars
 
 
 @pytest.mark.usefixtures("setup")
-class TestLogin:
+class TestAddress:
 
-    @allure.title("S_1006, TC_1014")
-    @allure.description("Login should succeed with valid credentials")
-    def test_correct_login(self, setup):
+    @allure.title("S_1005, TC_1013")
+    @allure.description("User should be able to change shipping address when logged in")
+    def test_address_edit(self, setup):
         self.driver.get(AllVars.home_url)
         address = AddressPO(self.driver)
         address_edit = AddressEditPO(self.driver)

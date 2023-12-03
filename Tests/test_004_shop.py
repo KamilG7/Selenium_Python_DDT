@@ -6,10 +6,10 @@ from Pages.shop_po import ShopPO
 
 
 @pytest.mark.usefixtures("setup")
-class TestLogin:
+class TestShop:
 
-    @allure.title("S_1006, TC_1014")
-    @allure.description("Login should succeed with valid credentials")
+    @allure.title("S_100, TC_1014")
+    @allure.description("User should have access to products in shop tab")
     def test_correct_login(self, setup):
         self.driver.get(AllVars.home_url)
         my_account = MyAccountPO(self.driver)

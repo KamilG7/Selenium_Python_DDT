@@ -16,7 +16,7 @@ class MyAccountLocators:
 
 class AddressLocators:
     address_tab = (By.XPATH, "//a[contains(text(), 'Addresses')]")
-    address_edit_tab = (By.XPATH, "//a[contains(text(), '//header/h3[contains(text(), 'Shipping address')]/following-sibling::*')]")
+    address_edit_tab = (By.XPATH, "//header/h3[contains(text(), 'Shipping address')]/following-sibling::*")
     address_changed_message = (By.XPATH, "//div[@class='woocommerce-message'")
 
 class AddressEditLocators:
