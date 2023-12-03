@@ -1,7 +1,3 @@
-import logging
-import allure
-from allure_commons.types import AttachmentType
-from selenium.webdriver.common.by import By
 from Locators.Locators import MyAccountLocators
 from OwnLibs.Keywords import *
 import logging

@@ -17,17 +17,18 @@ class MyAccountLocators:
 class AddressLocators:
     address_tab = (By.XPATH, "//a[contains(text(), 'Addresses')]")
     address_edit_tab = (By.XPATH, "//a[contains(text(), '//header/h3[contains(text(), 'Shipping address')]/following-sibling::*')]")
+    address_changed_message = (By.XPATH, "//div[@class='woocommerce-message'")
 
 class AddressEditLocators:
     address_country_combo = (By.XPATH, "//input[@role='combobox']")
     address_country = (By.XPATH, "//span[@role='combobox']")
+    address_first_name = (By.XPATH, "//input[@id='shipping_first_name']")
     address_last_name = (By.XPATH, "//input[@id='shipping_last_name']")
     address_name = (By.XPATH, "//input[@id='shipping_first_name']")
     address_street = (By.XPATH, "//input[@name='shipping_address_1']")
     address_zip_code = (By.XPATH, "//input[@id='shipping_postcode']")
     address_town = (By.XPATH, "//input[@id='shipping_city']")
     address_save_button = (By.XPATH, "//button[@name='save_address']")
-    address_changed_message = (By.XPATH, "//div[@class='woocommerce-message'")
     address_country_index = (By.XPATH, "//li[@tabindex='-1']")
 
 class ShopLocators:
